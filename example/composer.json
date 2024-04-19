@@ -1,0 +1,12 @@
+{
+    "name": "ec2-user/example",
+    "type": "project",
+    "require": {
+        "nesbot/carbon": "^2.72"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ec2User\\Example\\": "src/"
+        }
+    }
+}
