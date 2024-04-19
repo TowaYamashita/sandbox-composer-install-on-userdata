@@ -2,7 +2,7 @@
 # install Git and PHP
 yum update && \
 amazon-linux-extras enable php7.4 && \
-amazon-linux-extras install -y php7.4 
+amazon-linux-extras install -y php7.4
 yum install -y git
 
 # install and setup Composer
@@ -16,7 +16,7 @@ mv composer.phar /usr/local/bin/composer
 # fetch source code
 cd /home/ec2-user
 git clone https://github.com/TowaYamashita/sandbox-composer-install-on-userdata.git
-mv -r /home/ec2-user/sandbox-composer-install-on-userdata/example /home/ec2-user/example
+mv /home/ec2-user/sandbox-composer-install-on-userdata/example /home/ec2-user
 rm -rf /home/ec2-user/sandbox-composer-install-on-userdata
 
 # install package
