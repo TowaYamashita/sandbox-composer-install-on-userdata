@@ -21,8 +21,6 @@ rm -rf /home/ec2-user/sandbox-composer-install-on-userdata
 
 # install package
 cd example
-export HOME=/home/ec2-user
 composer install --no-dev -o
-unset HOME
 
 php index.php > result.log
