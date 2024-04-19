@@ -14,13 +14,11 @@ php -r "unlink('composer-setup.php');"
 mv composer.phar /usr/local/bin/composer
 
 # fetch source code
-cd /home/ec2-user
-git clone https://github.com/TowaYamashita/sandbox-composer-install-on-userdata.git
-mv /home/ec2-user/sandbox-composer-install-on-userdata/example /home/ec2-user
-rm -rf /home/ec2-user/sandbox-composer-install-on-userdata
+git clone https://github.com/TowaYamashita/sandbox-composer-install-on-userdata.git /home/ec2-user/sample
+mv /home/ec2-user/sample/example /home/ec2-user
+rm -rf /home/ec2-user/sample
 
 # install package
-cd example
-composer install --no-dev -o
+composer install --no-dev -o -d /home/ec2-user/example
 
-php index.php > result.log
+php -f /home/ec2-user/example/index.php > /home/ec2-user/example/result.log
